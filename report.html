@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report an Item · FINDIT · HCDC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+  </head>
+  <body>
+    <div class="brand-stripe" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="logo" href="index.html">
+          <span class="logo__mark"><i data-lucide="search"></i></span>
+          <span class="logo__text">
+            <strong>FINDIT</strong>
+            <small>Holy Cross of Davao College</small>
+          </span>
+        </a>
+        <button class="nav-toggle" aria-label="Open menu"><i data-lucide="menu"></i></button>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="browse.html">Browse Items</a>
+          <a href="report.html">Report an Item</a>
+          <a href="index.html#about">About Us</a>
+          <a class="btn btn-primary btn-sm" href="login.html">Login</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page-hero" style="max-width: 760px; padding-bottom: 72px">
+      <h1>Report an item on campus</h1>
+      <p>Tell HCDC staff what was lost or found around campus. Accurate details help match claims without exposing private information.</p>
+
+      <form id="report-form" class="card" style="padding: 24px" novalidate>
+        <div class="segmented">
+          <label><input type="radio" name="type" value="lost" checked /> Report lost item</label>
+          <label><input type="radio" name="type" value="found" /> Report found item</label>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="label" for="name">Item name</label>
+            <input class="input" id="name" name="name" placeholder="e.g. Navy backpack" />
+            <div class="field-error"></div>
+          </div>
+          <div class="form-group">
+            <label class="label" for="category">Category</label>
+            <select class="select" id="category" name="category" data-category-select>
+              <option value="">Select a category</option>
+            </select>
+            <div class="field-error"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="label" for="description">Description</label>
+          <textarea class="textarea" id="description" name="description" placeholder="Color, brand, unique marks, and where it was last seen."></textarea>
+          <div class="field-error"></div>
+          <p class="hint">Avoid sharing ID numbers or home addresses in public descriptions.</p>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="label" for="date">Date lost or found</label>
+            <input class="input" id="date" name="date" type="date" />
+            <div class="field-error"></div>
+          </div>
+          <div class="form-group">
+            <label class="label" for="location">Location</label>
+            <select class="select" id="location" name="location" data-location-select>
+              <option value="">Select a campus location</option>
+            </select>
+            <div class="field-error"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="label" for="photo">Upload item photo</label>
+          <div class="upload-box">
+            <input id="photo" name="photo" type="file" accept="image/*" />
+            <p class="hint">JPG or PNG, up to 5 MB. A preview appears below.</p>
+            <div class="upload-preview" id="photo-preview"><img alt="Selected item preview" /></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="label" for="extra">Additional information</label>
+          <textarea class="textarea" id="extra" name="extra" placeholder="Optional notes for HCDC Security or Student Affairs only."></textarea>
+        </div>
+
+        <div class="hero__actions">
+          <button class="btn btn-primary" type="submit">Submit report</button>
+          <a class="btn btn-secondary" href="browse.html">Cancel</a>
+        </div>
+      </form>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/browse.js"></script>
+    <script src="assets/js/report.js"></script>
+  </body>
+</html>
