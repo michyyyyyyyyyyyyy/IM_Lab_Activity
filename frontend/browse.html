@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse Items · FINDIT · HCDC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/components.css?v=20261121" />
+  </head>
+  <body>
+    <div class="brand-stripe" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="logo" href="index.html">
+          <span class="logo__mark"><i data-lucide="search"></i></span>
+          <span class="logo__text">
+            <strong>FINDIT</strong>
+            <small>Holy Cross of Davao College</small>
+          </span>
+        </a>
+        <button class="nav-toggle" aria-label="Open menu"><i data-lucide="menu"></i></button>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="browse.html">Browse Items</a>
+          <a href="report.html">Report an Item</a>
+          <a href="index.html#about">About Us</a>
+          <a class="btn btn-primary btn-sm" href="login.html">Login</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page-hero">
+      <h1>Browse campus items</h1>
+      <p>Search lost and found reports from Holy Cross of Davao College. Identifying details stay limited until a claim is reviewed by campus staff.</p>
+
+      <div class="filters">
+        <input class="input" id="filter-q" type="search" placeholder="Search by item or campus building" />
+        <select class="select" id="filter-type">
+          <option value="all">All types</option>
+          <option value="lost">Lost</option>
+          <option value="found">Found</option>
+        </select>
+        <select class="select" id="filter-category" data-category-select>
+          <option value="all">All categories</option>
+        </select>
+        <input class="input" id="filter-date" type="date" />
+        <select class="select" id="filter-sort">
+          <option value="newest">Newest first</option>
+          <option value="oldest">Oldest first</option>
+        </select>
+      </div>
+
+      <div class="item-grid" id="browse-grid"></div>
+      <div class="card empty-state" id="browse-empty" hidden>
+        <i data-lucide="search-x"></i>
+        <h3>No items match this search</h3>
+        <p>Try another keyword, clear a filter, or report the item yourself.</p>
+      </div>
+    </main>
+
+    <footer class="site-footer" style="margin-top: 64px">
+      <div class="container footer-bottom">
+        <span>© 2026 FINDIT · Holy Cross of Davao College</span>
+        <a href="index.html">Back to home</a>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="assets/js/main.js?v=20261121"></script>
+    <script src="assets/js/browse.js?v=20261121"></script>
+  </body>
+</html>

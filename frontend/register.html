@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register · FINDIT · HCDC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/components.css?v=20261121" />
+    <link rel="stylesheet" href="assets/css/auth.css" />
+  </head>
+  <body class="auth-body">
+    <aside class="auth-aside">
+      <a class="logo" href="index.html" style="color: #fff">
+        <span class="logo__mark" style="background: #fff; color: #0b3d91"><i data-lucide="search"></i></span>
+        <span class="logo__text">
+          <strong>FINDIT</strong>
+          <small style="color: #f3c5cc">Holy Cross of Davao College</small>
+        </span>
+      </a>
+      <div>
+        <h1>Join FINDIT, the HCDC campus lost and found.</h1>
+        <p>Create a student account to report items found around Sta. Ana campus, browse the catalog, and submit claims.</p>
+      </div>
+      <p>Already registered? Sign in from the login page.</p>
+    </aside>
+
+    <main class="auth-main">
+      <div class="auth-card">
+        <h2>Create an account</h2>
+        <p class="subtitle">Use your official HCDC student details.</p>
+        <form id="register-form" novalidate>
+          <div class="form-group">
+            <label class="label" for="fullName">Full name</label>
+            <input class="input" id="fullName" name="fullName" type="text" />
+            <div class="field-error"></div>
+          </div>
+          <div class="form-group">
+            <label class="label" for="studentId">Student ID</label>
+            <input class="input" id="studentId" name="studentId" type="text" placeholder="2024-11820" />
+            <div class="field-error"></div>
+          </div>
+          <div class="form-group">
+            <label class="label" for="email">Email address</label>
+            <input class="input" id="email" name="email" type="email" placeholder="firstname.lastname@hcdc.edu.ph" autocomplete="email" />
+            <div class="field-error"></div>
+          </div>
+          <div class="form-group">
+            <label class="label" for="password">Password</label>
+            <div class="password-field">
+              <input class="input" id="password" name="password" type="password" />
+              <button class="password-toggle" type="button" data-password-toggle aria-label="Show password">
+                <i data-lucide="eye"></i>
+              </button>
+            </div>
+            <div class="field-error"></div>
+          </div>
+          <div class="form-group">
+            <label class="label" for="confirmPassword">Confirm password</label>
+            <input class="input" id="confirmPassword" name="confirmPassword" type="password" />
+            <div class="field-error"></div>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit">Create account</button>
+        </form>
+        <p class="auth-foot">Already have an account? <a href="login.html">Sign in</a></p>
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="assets/js/main.js?v=20261121"></script>
+    <script src="assets/js/auth.js"></script>
+  </body>
+</html>

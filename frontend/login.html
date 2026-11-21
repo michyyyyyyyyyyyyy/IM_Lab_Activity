@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login · FINDIT · HCDC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/components.css?v=20261121" />
+    <link rel="stylesheet" href="assets/css/auth.css" />
+  </head>
+  <body class="auth-body">
+    <aside class="auth-aside">
+      <a class="logo" href="index.html" style="color: #fff">
+        <span class="logo__mark" style="background: #fff; color: #0b3d91"><i data-lucide="search"></i></span>
+        <span class="logo__text">
+          <strong>FINDIT</strong>
+          <small style="color: #f3c5cc">Holy Cross of Davao College</small>
+        </span>
+      </a>
+      <div>
+        <h1>Welcome back, Crusader.</h1>
+        <p>Sign in with your HCDC student ID or campus email to manage reports, track claims, and help return belongings found on campus.</p>
+      </div>
+      <p>Need an account? Registration takes less than a minute.</p>
+    </aside>
+
+    <main class="auth-main">
+      <div class="auth-card">
+        <h2>Sign in</h2>
+        <p class="subtitle">Use your HCDC email or student ID.</p>
+        <form id="login-form" novalidate>
+          <div class="form-group">
+            <label class="label" for="identifier">Email or student ID</label>
+            <input class="input" id="identifier" name="identifier" type="text" placeholder="name@hcdc.edu.ph" autocomplete="username" />
+            <div class="field-error"></div>
+          </div>
+          <div class="form-group">
+            <label class="label" for="password">Password</label>
+            <div class="password-field">
+              <input class="input" id="password" name="password" type="password" autocomplete="current-password" />
+              <button class="password-toggle" type="button" data-password-toggle aria-label="Show password">
+                <i data-lucide="eye"></i>
+              </button>
+            </div>
+            <div class="field-error"></div>
+          </div>
+          <label class="checkbox" style="margin-bottom: 18px">
+            <input type="checkbox" name="remember" /> Remember me
+          </label>
+          <button class="btn btn-primary btn-block" type="submit">Login</button>
+        </form>
+        <p class="auth-foot">No account yet? <a href="register.html">Create one</a></p>
+        <p class="hint" style="text-align: center">Demo: <code>admin@hcdc.edu.ph</code> or <code>alex.santos@hcdc.edu.ph</code> / <code>Password123</code></p>
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="assets/js/main.js?v=20261121"></script>
+    <script src="assets/js/auth.js"></script>
+  </body>
+</html>
